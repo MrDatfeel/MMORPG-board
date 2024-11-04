@@ -1,0 +1,18 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создать объявление</title>
+</head>
+<body>
+    <h2>Создать объявление</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}  <!-- Отображение формы -->
+        <button type="submit">Создать</button>
+    </form>
+    <a href="{% url 'announcement_list' %}">Назад к списку объявлений</a>  <!-- Ссылка на список объявлений -->
+</body>
+</html>
